@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import american from '../../../public/assets/imgs/logo/1.jpg'
+import american from "../../../public/assets/imgs/logo/1.jpg";
 export default function Header() {
   return (
     <>
@@ -18,19 +18,19 @@ export default function Header() {
         <div className="header__container--right div-flex">
           <div className="header__location div-flex div-border">
             <span className="material-symbols-outlined">map</span>
-            <p>Ha Noi</p>
+            <p>Hà Nội</p>
           </div>
           <div className="header__deliver div-flex div-border">
             <span className="material-symbols-outlined">local_shipping</span>
-            <p>Track Your Order</p>
+            <p>Vận chuyển</p>
           </div>
           <div className="header__compare div-flex div-border">
             <span className="material-symbols-outlined">compare_arrows</span>
-            <p>My Compare</p>
+            <p>So sánh</p>
           </div>
           <div className="header__wishList div-flex div-border">
             <span className="material-symbols-outlined">favorite</span>
-            <p>My WishList</p>
+            <p>Yêu thích</p>
           </div>
           <div className="header__language div-flex div-border">
             <div className="header__language--img">

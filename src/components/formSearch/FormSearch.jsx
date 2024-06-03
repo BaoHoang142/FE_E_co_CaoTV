@@ -10,8 +10,8 @@ export default function FormSearch() {
         </div>
         <div className="formSearch__middle">
           <span className="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search here" />
-          <button>Search</button>
+          <input type="text" placeholder="Tìm kiếm ngay" />
+          <button>Tìm kiếm</button>
         </div>
         <div className="formSearch__right">
           <div className="formSearch--right__account">
@@ -19,8 +19,8 @@ export default function FormSearch() {
               <span className="material-symbols-outlined">person</span>
             </div>
             <div className="formSearch--right__account__text">
-              <p className="text__account">My account</p>
-              <p className="text__signin">Sign in</p>
+              <p className="text__account">Tài khoản</p>
+              <p className="text__signin">Đăng nhập</p>
             </div>
           </div>
           <div className="formSearch--right__cart">
@@ -31,7 +31,7 @@ export default function FormSearch() {
               </div>
             </div>
             <div className="formSearch--right__account__text">
-              <p className="text__account">Cart</p>
+              <p className="text__account">Giỏ hàng</p>
               <p className="text__signin">$0.01</p>
             </div>
           </div>

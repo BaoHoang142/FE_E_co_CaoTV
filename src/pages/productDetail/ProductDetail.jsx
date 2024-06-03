@@ -169,7 +169,74 @@ export default function ProductDetail() {
       title: "Reviews",
     },
   ];
-
+  const dataFashion = [
+    {
+      id: 1,
+      title: "Poly",
+    },
+    {
+      id: 2,
+      title: "Cisco",
+    },
+    {
+      id: 3,
+      title: "Aver",
+    },
+    {
+      id: 4,
+      title: "Jabra",
+    },
+    {
+      id: 5,
+      title: "Maxhub",
+    },
+    ,
+    {
+      id: 6,
+      title: "Logitech",
+    },
+    ,
+    {
+      id: 7,
+      title: "North Bayou",
+    },
+  ];
+  const dataProductNav = [
+    {
+      id: 1,
+      title: "Hội nghị trực tuyến",
+    },
+    {
+      id: 2,
+      title: "Camera hội nghị USB",
+    },
+    {
+      id: 3,
+      title: "Loa mic hội nghị",
+    },
+    {
+      id: 4,
+      title: "Điện thoại hội nghị",
+    },
+    {
+      id: 5,
+      title: "Giá treo thiết bị hội nghị",
+    },
+  ];
+  const dataService = [
+    {
+      id: 1,
+      title: "Dịch vụ cho thuê thiết bị",
+    },
+    {
+      id: 2,
+      title: "Dịch vụ sửa chữa thiết bị",
+    },
+    {
+      id: 3,
+      title: "Dịch vụ bảo hành, bảo trì",
+    },
+  ];
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
@@ -179,7 +246,7 @@ export default function ProductDetail() {
         <div className="productDetail__nav">
           <div className="productDetail__nav__category">
             <span className="material-symbols-outlined">menu</span>
-            <p className="productDetail__nav__category__text">All Categories</p>
+            <p className="productDetail__nav__category__text">Mặt hàng</p>
             <div className="productDetail__nav__category__hover">
               <ul>
                 {dataCategory.map((item) => (
@@ -193,19 +260,49 @@ export default function ProductDetail() {
           </div>
           <div className="productDetail__nav__item">
             <ul>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>Product</li>
-              <li>Blog</li>
-              <li>Page</li>
-              <li>Contact</li>
+              <li className="productDetail__nav__item__fashion">
+                <p>Thương hiệu</p>
+                <div className="productDetail__nav__item__fashion__hover">
+                  <ul>
+                    {dataFashion.map((item) => (
+                      <li key={item.id}>
+                        <p>{item.title}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+              <li className="productDetail__nav__item__product">
+                <p>Sản phẩm</p>
+                <div className="productDetail__nav__item__product__hover">
+                  <ul>
+                    {dataProductNav.map((item) => (
+                      <li key={item.id}>
+                        <p>{item.title}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+              <li className="productDetail__nav__item__service">
+                <p>Dịch vụ</p>
+                <div className="productDetail__nav__item__service__hover">
+                  <ul>
+                    {dataService.map((item) => (
+                      <li key={item.id}>
+                        <p>{item.title}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
           <div className="productDetail__nav__content">
             <span className="material-symbols-outlined">
               confirmation_number
             </span>
-            <p>Get 30% Off On Selected Items</p>
+            <p>Săn ngay voucher giảm tới 30%</p>
           </div>
         </div>
         <div className="productDetail__body">
@@ -472,15 +569,15 @@ export default function ProductDetail() {
           </div>
           <div className="productDetail__body__contact">
             <p className="productDetail__body__contact--left">
-              Sign up to Newsletter
+              Đăng nhập để gửi hỗ trợ
             </p>
             <p className="productDetail__body__contact--middle">
               {" "}
-              get updates by subscribe our weekly newsletter
+              đăng ký để nhận thông tin mới nhất
             </p>
             <div className="productDetail__body__contact--right">
-              <input type="text" placeholder="Your email address" />
-              <button>Subscribe</button>
+              <input type="text" placeholder="Địa chỉ email" />
+              <button>Đăng ký</button>
             </div>
           </div>
         </div>
