@@ -1,0 +1,95 @@
+.footer__container {
+    width: 99vw;
+    height: 560px;
+    background-color: #fff;
+    padding: 12px;
+    .footer--top {
+        width: 100%;
+        height: 90%;
+        border-bottom: 1px solid rgb(183, 179, 179);
+        display: flex;
+        justify-content: space-between;
+        .footer--top__one {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .footer--top__one__hotline {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .material-symbols-outlined {
+                    font-size: 60px;
+                    color: #D70018;
+                }
+                .footer--top__one__hotline__text {
+                    display: flex;
+                    flex-direction: column;
+                    .footer--top__one__hotline__text__title {
+                        font-size: 14px;
+                        color: #6C757D;
+                    }
+                    .footer--top__one__hotline__text__number {
+                        font-size: 24px;
+                        color: #D70018;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .footer--top__one__address {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .footer--top__one__address__top {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        font-size: 16px;
+                        color:  black;
+                        font-weight: 700;
+                    }
+                }
+                .footer--top__one__address__bot {
+                    font-size: 14px;
+                    color: #6C757D;
+                }
+            }
+            .footer--top__one__contact {
+                display: flex;
+                gap: 20px;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    cursor: pointer;
+                }
+                img:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
+        h3 {
+            font-size: 22px;
+        }
+        ul {
+            li {
+                list-style: none;
+                color: #6C757D;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+        }
+
+    }
+    .footer--bottom {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer--bottom__text {
+            font-size: 14px;
+            color: #6C757D;
+        }
+    }
+}

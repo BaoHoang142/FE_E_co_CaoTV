@@ -1,0 +1,28 @@
+
+.slidercomment {
+    width: 700px;
+    height: 200px;
+    .slidercomment__item {
+        width: 700px;
+        height: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        text-align: center;
+        gap: 20px;
+        cursor: pointer;
+        .slidercomment__item__img {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .slidercomment__item__title {
+            width: 70%;
+            height: 100%;
+            text-wrap: anywhere;
+            margin-top: 20px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}
