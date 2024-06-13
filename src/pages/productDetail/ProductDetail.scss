@@ -1,5 +1,5 @@
 .productDetail__container {
-  width: 99vw;
+  width: 100%;
   height: auto;
   .productDetail__nav {
     width: 100%;
@@ -86,14 +86,13 @@
           font-weight: 700;
         }
         .productDetail__nav__item__fashion {
-          width: 12vw;
-          height: 100%;
+          width: 30%;
           position: relative;
           .productDetail__nav__item__fashion__hover {
             position: absolute;
             z-index: 9;
-            top: 30px;
-            left: -40px;
+            top: 50px;
+            left: -15px;
             width: 100%;
             height: 500px;
             background-color: #fff;
@@ -118,7 +117,8 @@
                 text-align: center;
                 bottom: 10px;
                 display: flex;
-                justify-content: center;
+                padding-left: 20px;
+                gap: 10px;
                 p {
                   color: #b3b3b3;
                 }
@@ -134,13 +134,12 @@
           display: block;
         }
         .productDetail__nav__item__product {
-          width: 12vw;
+          width: 30%;
           position: relative;
-          height: 100%;
           .productDetail__nav__item__product__hover {
             position: absolute;
             z-index: 9;
-            top: 30px;
+            top: 50px;
             left: -40px;
             width: 100%;
             height: 500px;
@@ -166,7 +165,8 @@
                 text-align: center;
                 bottom: 10px;
                 display: flex;
-                justify-content: center;
+                padding-left: 20px;
+                gap: 10px;
                 p {
                   color: #b3b3b3;
                 }
@@ -182,13 +182,12 @@
           display: block;
         }
         .productDetail__nav__item__service {
-          width: 12vw;
+          width: 30%;
           position: relative;
-          height: 100%;
           .productDetail__nav__item__service__hover {
             position: absolute;
             z-index: 9;
-            top: 30px;
+            top: 50px;
             left: -40px;
             width: 100%;
             height: 500px;
@@ -214,7 +213,8 @@
                 text-align: center;
                 bottom: 10px;
                 display: flex;
-                justify-content: center;
+                padding-left: 20px;
+                gap: 10px;
                 p {
                   color: #b3b3b3;
                 }

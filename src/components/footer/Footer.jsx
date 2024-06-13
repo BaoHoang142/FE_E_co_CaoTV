@@ -6,7 +6,13 @@ import insta from "../../../public/assets/imgs/internet/icons8-instagram-50.png"
 import pinteres from "../../../public/assets/imgs/internet/icons8-pinterest-50.png";
 import threads from "../../../public/assets/imgs/internet/icons8-threads-48.png";
 import ytb from "../../../public/assets/imgs/internet/icons8-youtube-50.png";
-import payment from '../../../public/assets/imgs/logo/payment.png'
+import payment from "../../../public/assets/imgs/logo/payment.png";
+import Accordion from "@mui/material/Accordion";
+import AccordionActions from "@mui/material/AccordionActions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
 export default function Footer() {
   return (
     <>
@@ -55,6 +61,27 @@ export default function Footer() {
               <li>Ultrabooks</li>
             </ul>
           </div>
+          <div className="footer--top__twoResponse">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <h3>Find In Fast</h3>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul>
+                  <li>Accessories</li>
+                  <li>Gaming</li>
+                  <li>Laptop&Computer</li>
+                  <li>Mac Computer</li>
+                  <li>PC Computer</li>
+                  <li>Ultrabooks</li>
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
           <div className="footer--top__three">
             <h3>Information</h3>
             <ul>
@@ -65,6 +92,27 @@ export default function Footer() {
               <li>Notice</li>
               <li>Sitemap</li>
             </ul>
+          </div>
+          <div className="footer--top__threeResponse">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <h3>Information</h3>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul>
+                  <li>About Us</li>
+                  <li>Contact Us</li>
+                  <li>Suppliers</li>
+                  <li>Address</li>
+                  <li>Notice</li>
+                  <li>Sitemap</li>
+                </ul>
+              </AccordionDetails>
+            </Accordion>
           </div>
           <div className="footer--top__four">
             <h3>My Account</h3>
@@ -77,6 +125,27 @@ export default function Footer() {
               <li>Sitemap</li>
             </ul>
           </div>
+          <div className="footer--top__fourResponse">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <h3>My Account</h3>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul>
+                  <li>About Us</li>
+                  <li>Contact Us</li>
+                  <li>Suppliers</li>
+                  <li>Address</li>
+                  <li>Notice</li>
+                  <li>Sitemap</li>
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
           <div className="footer--top__five">
             <h3>Service</h3>
             <ul>
@@ -88,10 +157,31 @@ export default function Footer() {
               <li>Sitemap</li>
             </ul>
           </div>
+          <div className="footer--top__fiveResponse">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <h3>Service</h3>
+              </AccordionSummary>
+              <AccordionDetails>
+                <ul>
+                  <li>About Us</li>
+                  <li>Contact Us</li>
+                  <li>Suppliers</li>
+                  <li>Address</li>
+                  <li>Notice</li>
+                  <li>Sitemap</li>
+                </ul>
+              </AccordionDetails>
+            </Accordion>
+          </div>
         </div>
         <div className="footer--bottom">
           <p className="footer--bottom__text">
-          © 2024 - Ecommerce software by PrestaShop™
+            © 2024 - Ecommerce software by PrestaShop™
           </p>
           <img src={payment} alt="" />
         </div>

@@ -14,6 +14,13 @@ export default function SliderBrand() {
     slidesToShow: 6,
     slidesToScroll: 6,
   };
+  var settingsRespon = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  };
   const brand = [
     {
       id: 2,
@@ -77,6 +84,7 @@ export default function SliderBrand() {
     },
   ]
   return (
+    <>
     <Slider {...settings} className="sliderbrand">
         {brand.map((item) => (
             <div className="sliderbrand__item" key={item.id}>
@@ -84,5 +92,15 @@ export default function SliderBrand() {
           </div>
         ))}
     </Slider>
+    <Slider {...settingsRespon} className="sliderbrandResponsive">
+        {brand.map((item) => (
+            <div className="sliderbrand__item" key={item.id}>
+            <img src={item.img} alt="" />
+          </div>
+        ))}
+    </Slider>
+    </>
+    
+    
   );
 }

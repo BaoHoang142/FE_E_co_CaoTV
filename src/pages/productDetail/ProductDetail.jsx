@@ -173,68 +173,83 @@ export default function ProductDetail() {
     {
       id: 1,
       title: "Poly",
+      span: "polyline",
     },
     {
       id: 2,
       title: "Cisco",
+      span: "diamond",
     },
     {
       id: 3,
       title: "Aver",
+      span: "android",
     },
     {
       id: 4,
       title: "Jabra",
+      span: "logo_dev",
     },
     {
       id: 5,
       title: "Maxhub",
+      span: "token",
     },
     ,
     {
       id: 6,
       title: "Logitech",
+      span: "settings_heart",
     },
     ,
     {
       id: 7,
       title: "North Bayou",
+      span: "cruelty_free",
     },
   ];
   const dataProductNav = [
     {
       id: 1,
       title: "Hội nghị trực tuyến",
+      span: "groups_2",
     },
     {
       id: 2,
       title: "Camera hội nghị USB",
+      span: "usb",
     },
     {
       id: 3,
       title: "Loa mic hội nghị",
+      span: "mic",
     },
     {
       id: 4,
       title: "Điện thoại hội nghị",
+      span: "phone_iphone",
     },
     {
       id: 5,
       title: "Giá treo thiết bị hội nghị",
+      span: "qr_code_2_add",
     },
   ];
   const dataService = [
     {
       id: 1,
       title: "Dịch vụ cho thuê thiết bị",
+      span: "dynamic_form",
     },
     {
       id: 2,
       title: "Dịch vụ sửa chữa thiết bị",
+      span: "swipe_vertical",
     },
     {
       id: 3,
       title: "Dịch vụ bảo hành, bảo trì",
+      span: "construction",
     },
   ];
   const toggleDescription = () => {
@@ -266,6 +281,9 @@ export default function ProductDetail() {
                   <ul>
                     {dataFashion.map((item) => (
                       <li key={item.id}>
+                        <span className="material-symbols-outlined">
+                          {item.span}
+                        </span>
                         <p>{item.title}</p>
                       </li>
                     ))}
@@ -278,6 +296,9 @@ export default function ProductDetail() {
                   <ul>
                     {dataProductNav.map((item) => (
                       <li key={item.id}>
+                        <span className="material-symbols-outlined">
+                          {item.span}
+                        </span>
                         <p>{item.title}</p>
                       </li>
                     ))}
@@ -290,6 +311,9 @@ export default function ProductDetail() {
                   <ul>
                     {dataService.map((item) => (
                       <li key={item.id}>
+                        <span className="material-symbols-outlined">
+                          {item.span}
+                        </span>
                         <p>{item.title}</p>
                       </li>
                     ))}
