@@ -28,6 +28,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { InputNumber, Space } from "antd";
+
 export default function ProductDetail() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [isExpanded, setIsExpanded] = useState(true);
@@ -255,80 +257,12 @@ export default function ProductDetail() {
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
+  const onChange = (value) => {
+    console.log("changed", value);
+  };
   return (
     <>
       <div className="productDetail__container">
-        <div className="productDetail__nav">
-          <div className="productDetail__nav__category">
-            <span className="material-symbols-outlined">menu</span>
-            <p className="productDetail__nav__category__text">Mặt hàng</p>
-            <div className="productDetail__nav__category__hover">
-              <ul>
-                {dataCategory.map((item) => (
-                  <li key={item.id}>
-                    <img src={item.img} alt="" />
-                    <p>{item.title}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="productDetail__nav__item">
-            <ul>
-              <li className="productDetail__nav__item__fashion">
-                <p>Thương hiệu</p>
-                <div className="productDetail__nav__item__fashion__hover">
-                  <ul>
-                    {dataFashion.map((item) => (
-                      <li key={item.id}>
-                        <span className="material-symbols-outlined">
-                          {item.span}
-                        </span>
-                        <p>{item.title}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-              <li className="productDetail__nav__item__product">
-                <p>Sản phẩm</p>
-                <div className="productDetail__nav__item__product__hover">
-                  <ul>
-                    {dataProductNav.map((item) => (
-                      <li key={item.id}>
-                        <span className="material-symbols-outlined">
-                          {item.span}
-                        </span>
-                        <p>{item.title}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-              <li className="productDetail__nav__item__service">
-                <p>Dịch vụ</p>
-                <div className="productDetail__nav__item__service__hover">
-                  <ul>
-                    {dataService.map((item) => (
-                      <li key={item.id}>
-                        <span className="material-symbols-outlined">
-                          {item.span}
-                        </span>
-                        <p>{item.title}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="productDetail__nav__content">
-            <span className="material-symbols-outlined">
-              confirmation_number
-            </span>
-            <p>Săn ngay voucher giảm tới 30%</p>
-          </div>
-        </div>
         <div className="productDetail__body">
           <div className="productDetail__body__linkto">
             <p>Home</p>
@@ -436,21 +370,13 @@ export default function ProductDetail() {
               </div>
               <div className="productDetail__body__main--middle--middle">
                 <div className="productDetail__body__main--middle--middle__quantity">
-                  <span className="material-symbols-outlined incre">add</span>
-                  <div className="productDetail__body__main--middle--middle__quantity--number">
-                    <span className="number">1</span>
-                    <div className="productDetail__body__main--middle--middle__quantity--iconup">
-                      <span className="material-symbols-outlined incre">
-                        arrow_drop_up
-                      </span>
-                      <span className="material-symbols-outlined decre">
-                        arrow_drop_down
-                      </span>
-                    </div>
-                  </div>
-                  <span className="material-symbols-outlined decre">
-                    check_indeterminate_small
-                  </span>
+                  <InputNumber
+                    size="large"
+                    min={1}
+                    max={100000}
+                    defaultValue={1}
+                    onChange={onChange}
+                  />
                 </div>
                 <div className="productDetail__body__main--middle--middle__addToCart">
                   <span className="material-symbols-outlined">

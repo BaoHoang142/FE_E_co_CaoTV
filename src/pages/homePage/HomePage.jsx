@@ -28,6 +28,7 @@ import about2 from "../../../public/assets/imgs/about/mercado_support2.png";
 import about3 from "../../../public/assets/imgs/about/mercado_support3.png";
 import about4 from "../../../public/assets/imgs/about/mercado_support4.png";
 import { Rating } from "@mui/material";
+import { Link } from "react-router-dom";
 export default function HomePage() {
   // slider
   var settings = {
@@ -109,7 +110,7 @@ export default function HomePage() {
       descreption: "Samsung Galaxy S21 Dual-SIM 128GB 5G Smartphone",
       useFor: "Graphic Corner",
       price: "200",
-    }
+    },
   ];
   const bestSeller = [
     {
@@ -167,7 +168,7 @@ export default function HomePage() {
     {
       id: 1,
       img: arrivals,
-      title: "Arrivals",
+      title: "Smart",
     },
     {
       id: 2,
@@ -301,78 +302,6 @@ export default function HomePage() {
   return (
     <>
       <div className="homePage__container">
-        <div className="homePage__nav">
-          <div className="homePage__nav__category">
-            <span className="material-symbols-outlined">menu</span>
-            <p>Mặt hàng</p>
-            <div className="homePage__nav__category__hover">
-              <ul>
-                {dataCategory.map((item) => (
-                  <li key={item.id}>
-                    <img src={item.img} alt="" />
-                    <p>{item.title}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="homePage__nav__item">
-            <ul>
-              <li className="homePage__nav__item__fashion">
-                <p>Thương hiệu</p>
-                <div className="homePage__nav__item__fashion__hover">
-                  <ul>
-                    {dataFashion.map((item) => (
-                      <li key={item.id}>
-                        <span className="material-symbols-outlined">
-                          {item.span}
-                        </span>
-                        <p>{item.title}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-              <li className="homePage__nav__item__product">
-                <p>Sản phẩm</p>
-                <div className="homePage__nav__item__product__hover">
-                  <ul>
-                    {dataProductNav.map((item) => (
-                      <li key={item.id}>
-                        <span className="material-symbols-outlined">
-                          {item.span}
-                        </span>
-                        <p>{item.title}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-              <li className="homePage__nav__item__service">
-                <p>Dịch vụ</p>
-                <div className="homePage__nav__item__service__hover">
-                  <ul>
-                    {dataService.map((item) => (
-                      <li key={item.id}>
-                        <span className="material-symbols-outlined">
-                          {item.span}
-                        </span>
-                        <p>{item.title}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="homePage__nav__content">
-            <span className="material-symbols-outlined">
-              confirmation_number
-            </span>
-            <p>Săn ngay voucher giảm tới 30%</p>
-          </div>
-        </div>
         <div className="homePage__body">
           <div className="homePage__body__banner">
             <div className="homePage__body__banner--right">
@@ -399,54 +328,56 @@ export default function HomePage() {
               </div>
               <div className="homePage__body__hotSale--right__product">
                 {dataProduct.map((product) => (
-                  <div
-                    className="homePage__body__hotSale--right__product__item"
-                    key={product.id}
-                    data-aos="fade-up"
-                  >
-                    <div className="homePage__body__hotSale--right__product__item__img">
-                      <img src={product.img} alt="" />
-                    </div>
-                    <div className="homePage__body__hotSale--right__product__item__hover">
-                      <img src={product.imgHover} alt="" />
-                      <div className="homePage__body__hotSale--right__product__item__hover__allicon">
-                        <div className="homePage__body__hotSale--right__product__item__hover__wishList divIcon">
-                          <span className="material-symbols-outlined">
-                            favorite
-                          </span>
-                        </div>
-                        <div className="homePage__body__hotSale--right__product__item__hover__eye divIcon">
-                          <span className="material-symbols-outlined">
-                            visibility
-                          </span>
-                        </div>
-                        <div className="homePage__body__hotSale--right__product__item__hover__compare divIcon">
-                          <span className="material-symbols-outlined">
-                            compare_arrows
-                          </span>
+                  <Link to={"/productDetail/" + product.id}>
+                    <div
+                      className="homePage__body__hotSale--right__product__item"
+                      key={product.id}
+                      data-aos="fade-up"
+                    >
+                      <div className="homePage__body__hotSale--right__product__item__img">
+                        <img src={product.img} alt="" />
+                      </div>
+                      <div className="homePage__body__hotSale--right__product__item__hover">
+                        <img src={product.imgHover} alt="" />
+                        <div className="homePage__body__hotSale--right__product__item__hover__allicon">
+                          <div className="homePage__body__hotSale--right__product__item__hover__wishList divIcon">
+                            <span className="material-symbols-outlined">
+                              favorite
+                            </span>
+                          </div>
+                          <div className="homePage__body__hotSale--right__product__item__hover__eye divIcon">
+                            <span className="material-symbols-outlined">
+                              visibility
+                            </span>
+                          </div>
+                          <div className="homePage__body__hotSale--right__product__item__hover__compare divIcon">
+                            <span className="material-symbols-outlined">
+                              compare_arrows
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <p className="homePage__body__hotSale--right__product__item__title">
-                      {product.useFor}.
-                    </p>
-                    <p className="homePage__body__hotSale--right__product__item__description">
-                      {product.descreption}
-                    </p>
-                    <div className="homePage__body__hotSale--right__product__item__rate">
-                      <Rating name="read-only" value={3} readOnly />
-                    </div>
-                    <div className="homePage__body__hotSale--right__product__item__price">
-                      <p className="homePage__body__hotSale--right__product__item__price__number">
-                        $ {product.price}
+                      <p className="homePage__body__hotSale--right__product__item__title">
+                        {product.useFor}.
                       </p>
-                      <div className="homePage__body__hotSale--right__product__item__price__addcart">
-                        <span className="material-symbols-outlined">
-                          add_shopping_cart
-                        </span>
+                      <p className="homePage__body__hotSale--right__product__item__description">
+                        {product.descreption}
+                      </p>
+                      <div className="homePage__body__hotSale--right__product__item__rate">
+                        <Rating name="read-only" value={3} readOnly />
+                      </div>
+                      <div className="homePage__body__hotSale--right__product__item__price">
+                        <p className="homePage__body__hotSale--right__product__item__price__number">
+                          $ {product.price}
+                        </p>
+                        <div className="homePage__body__hotSale--right__product__item__price__addcart">
+                          <span className="material-symbols-outlined">
+                            add_shopping_cart
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

@@ -5,6 +5,7 @@ import card1 from "../../../public/assets/imgs/card/amex.svg";
 import card2 from "../../../public/assets/imgs/card/mastercard.svg";
 import card3 from "../../../public/assets/imgs/card/paypal.png";
 import card4 from "../../../public/assets/imgs/card/visa.svg";
+import { Link } from "react-router-dom";
 export default function Cart() {
   const [isExpanded, setIsExpanded] = useState(true);
 
@@ -77,10 +78,12 @@ export default function Cart() {
     <>
       <div className="cart__container">
         <div className="cart__left">
-          <div className="cart__left__rollback">
-            <span class="material-symbols-outlined">arrow_left_alt</span>
-            <p>Quay lại mua hàng</p>
-          </div>
+          <Link to={"/"}>
+            <div className="cart__left__rollback">
+              <span class="material-symbols-outlined">arrow_left_alt</span>
+              <p>Quay lại mua hàng</p>
+            </div>
+          </Link>
           <div className="cart__left__header">
             <div className="cart__left__header__title">
               <p>Giỏ hàng của bạn</p>
@@ -95,9 +98,11 @@ export default function Cart() {
               </select>
             </div>
           </div>
-          <div className={`cart__left__product ${
+          <div
+            className={`cart__left__product ${
               isExpanded ? "expanded" : "collapsed"
-            }`}>
+            }`}
+          >
             {dataProduct.map((item) => (
               <div className="cart__left__product__item">
                 <div className="cart__left__product__item__left">
@@ -121,7 +126,7 @@ export default function Cart() {
             ))}
           </div>
           <div className="cart__left__btnShow" onClick={toggleDescription}>
-          <p>{isExpanded ? "Show Less" : "Show More"}</p>
+            <p>{isExpanded ? "Show Less" : "Show More"}</p>
             {isExpanded ? (
               <span class="material-symbols-outlined">keyboard_arrow_up</span>
             ) : (
@@ -160,6 +165,10 @@ export default function Cart() {
             </div>
           </div>
           <div className="cart__right__total">
+            <div className="cart__right__total__item">
+              <p>Tổng số sản phẩm</p>
+              <p>9</p>
+            </div>
             <div className="cart__right__total__item">
               <p>Tổng tiền sản phẩm</p>
               <p>$9999</p>
