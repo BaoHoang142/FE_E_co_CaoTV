@@ -1,5 +1,7 @@
 import Header from "../components/header/Header";
 import Router from "../layouts/router/Router";
+import SignIn from "../pages/Authentication/SignIn";
+import SignUp from "../pages/Authentication/SignUp";
 import Cart from "../pages/cart/Cart";
 import Computer from "../pages/category/computer/Computer";
 import Smart from "../pages/category/smart/Smart";
@@ -67,6 +69,14 @@ const routesConfig = [
         element: <Computer></Computer>,
       },
     ],
+  },
+  {
+    path: "/auth/dangnhap",
+    element: <SignIn></SignIn>,
+  },
+  {
+    path: "/auth/dangky",
+    element: <SignUp></SignUp>,
   },
 ];
 
