@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoDark from "../../../public/assets/imgs/logo/logo-dark.svg";
-import Logo from "../../../public/assets/imgs/logo/logo.svg";
+import LogoDark from "../../../public/assets/imgs/logo/mercado-suppermarket-store-logo-1633487728.jpg";
+import Logo from "../../../public/assets/imgs/logo/mercado-suppermarket-store-logo-1633487728.jpg";
 
 const SignIn = () => {
   return (
-    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+    <div className="rounded-sm bg-white dark:border-strokedark dark:bg-boxdark mt-25">
       <div className="flex flex-wrap items-center">
         <div className="hidden w-full xl:block xl:w-1/2">
           <div className="py-17.5 px-26 text-center">

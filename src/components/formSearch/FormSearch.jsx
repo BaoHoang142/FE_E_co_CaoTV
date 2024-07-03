@@ -11,8 +11,9 @@ import watch from "../../../public/assets/imgs/categories/smartwatch.png";
 import lighting from "../../../public/assets/imgs/categories/desk-lamp.png";
 import drones from "../../../public/assets/imgs/categories/drone.png";
 import logo from "../../../public/assets/imgs/logo/mercado-suppermarket-store-logo-1633487728.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function FormSearch() {
+  const navigate = useNavigate();
   const dataCategory = [
     {
       id: 1,
@@ -159,37 +160,39 @@ export default function FormSearch() {
         <div className="formSearch__middle">
           <span className="material-symbols-outlined">search</span>
           <input type="text" placeholder="Tìm kiếm ngay" />
-          <button>Tìm kiếm</button>
+          <button className="btnSearch">Tìm kiếm</button>
         </div>
         <div className="formSearch__right">
           <div className="formSearch--right__account">
             <div className="formSearch--right__account__img">
               <span className="material-symbols-outlined">person</span>
             </div>
-            <div className="formSearch--right__account__text">
-              <p className="text__account">Tài khoản</p>
-              <p className="text__signin">Đăng nhập</p>
-            </div>
+            <Link to={"auth/dangnhap"}>
+              <div className="formSearch--right__account__text">
+                <p className="text__account">Tài khoản</p>
+                <p className="text__signin">Đăng nhập</p>
+              </div>
+            </Link>
           </div>
-          <div className="formSearch--right__cart">
-            <Link to={"/cart"}>
+          <Link to={"/cart"}>
+            <div className="formSearch--right__cart">
               <div className="formSearch--right__account__img">
                 <span className="material-symbols-outlined">shopping_cart</span>
                 <div className="formSearch--right__account__img__number">0</div>
               </div>
-            </Link>
-            <div className="formSearch--right__account__text">
-              <p className="text__account">Giỏ hàng</p>
-              <p className="text__signin">$0.01</p>
+              <div className="formSearch--right__account__text">
+                <p className="text__account">Giỏ hàng</p>
+                <p className="text__signin">$0.01</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="homePage__nav">
-        <div className="homePage__nav__category">
-          <span className="material-symbols-outlined">menu</span>
-          <p>Mặt hàng</p>
-          <div className="homePage__nav__category__hover">
+        <div className="homePage__nav__category" onClick={() => navigate("/")}>
+          <span className="material-symbols-outlined">home</span>
+          <p>Trang chủ</p>
+          {/* <div className="homePage__nav__category__hover">
             <ul>
               {dataCategory.map((item) => (
                 <Link to={`/${item.title}`}>
@@ -200,7 +203,7 @@ export default function FormSearch() {
                 </Link>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="homePage__nav__item">

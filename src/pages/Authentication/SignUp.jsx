@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoDark from "../../../public/assets/imgs/logo/logo-dark.svg";
-import Logo from "../../../public/assets/imgs/logo/logo.svg";
+import LogoDark from "../../../public/assets/imgs/logo/mercado-suppermarket-store-logo-1633487728.jpg";
+import Logo from "../../../public/assets/imgs/logo/mercado-suppermarket-store-logo-1633487728.jpg";
 
 const SignUp = () => {
   return (
-    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+    <div className="rounded-sm  bg-white dark:border-strokedark dark:bg-boxdark">
       <div className="flex flex-wrap items-center">
         <div className="hidden w-full xl:block xl:w-1/2">
           <div className="py-17.5 px-26 text-center">
@@ -145,11 +145,9 @@ const SignUp = () => {
 
         <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
           <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
-            <span className="mb-1.5 block font-medium">Đăng ký miễn phí</span>
             <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
               Đăng ký
             </h2>
-
             <form>
               <div className="mb-4">
                 <label className="mb-2.5 block font-medium text-black dark:text-white">

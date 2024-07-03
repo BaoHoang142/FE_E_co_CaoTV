@@ -118,7 +118,9 @@ export default function Cart() {
                   </div>
                 </div>
                 <div className="cart__left__product__item__right">
-                  <span>2</span>
+                  <span>
+                    <strong>2</strong>
+                  </span>
                   <p>$ {item.price}</p>
                   <span class="material-symbols-outlined">delete</span>
                 </div>

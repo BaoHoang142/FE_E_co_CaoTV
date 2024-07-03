@@ -68,7 +68,7 @@ export default function SliderBrand() {
     },
     {
       id: 13,
-      img: brand3,  
+      img: brand3,
     },
     {
       id: 14,
@@ -82,17 +82,17 @@ export default function SliderBrand() {
       id: 16,
       img: brand6,
     },
-  ]
+  ];
   return (
     <>
-    <Slider {...settings} className="sliderbrand">
+      <Slider {...settings} className="sliderbrand">
         {brand.map((item) => (
-            <div className="sliderbrand__item" key={item.id}>
+          <div className="sliderbrand__item" key={item.id}>
             <img src={item.img} alt="" />
           </div>
         ))}
-    </Slider>
-    <Slider {...settingsRespon} className="sliderbrandResponsive">
+      </Slider>
+      <Slider {...settingsRespon} className="sliderbrandResponsive">
         {brand.map((item) => (
             <div className="sliderbrand__item" key={item.id}>
             <img src={item.img} alt="" />
@@ -100,7 +100,5 @@ export default function SliderBrand() {
         ))}
     </Slider>
     </>
-    
-    
   );
 }

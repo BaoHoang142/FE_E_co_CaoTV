@@ -1,5 +1,6 @@
 import Header from "../components/header/Header";
 import Router from "../layouts/router/Router";
+import RouterCart from "../layouts/router/RouterCart";
 import SignIn from "../pages/Authentication/SignIn";
 import SignUp from "../pages/Authentication/SignUp";
 import Cart from "../pages/cart/Cart";
@@ -32,7 +33,7 @@ const routesConfig = [
   },
   {
     path: "/cart",
-    element: <Router></Router>,
+    element: <RouterCart></RouterCart>,
     children: [
       {
         path: "",

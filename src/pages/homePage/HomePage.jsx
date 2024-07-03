@@ -308,9 +308,9 @@ export default function HomePage() {
               <SimpleSlider></SimpleSlider>
             </div>
           </div>
-          <div className="homePage__body__brand" data-aos="fade-up">
+          {/* <div className="homePage__body__brand" data-aos="fade-up">
             <SliderBrand></SliderBrand>
-          </div>
+          </div> */}
           <div className="homePage__body__hotSale" data-aos="fade-up">
             <div className="homePage__body__hotSale--left">
               <img src={banner} alt="" />

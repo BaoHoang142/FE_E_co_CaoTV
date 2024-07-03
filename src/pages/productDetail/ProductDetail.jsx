@@ -472,7 +472,6 @@ export default function ProductDetail() {
                 </p>
                 <div className="productDetail__body__description__content__img__img">
                   <img src={productDetail2} alt="" />
-                  <img src={productDetail2} alt="" />
                 </div>
                 <img src={productDetail3} alt="" />
                 <img
@@ -516,19 +515,6 @@ export default function ProductDetail() {
             ) : (
               <span class="material-symbols-outlined">keyboard_arrow_down</span>
             )}
-          </div>
-          <div className="productDetail__body__contact">
-            <p className="productDetail__body__contact--left">
-              Đăng nhập để gửi hỗ trợ
-            </p>
-            <p className="productDetail__body__contact--middle">
-              {" "}
-              đăng ký để nhận thông tin mới nhất
-            </p>
-            <div className="productDetail__body__contact--right">
-              <input type="text" placeholder="Địa chỉ email" />
-              <button>Đăng ký</button>
-            </div>
           </div>
         </div>
       </div>
